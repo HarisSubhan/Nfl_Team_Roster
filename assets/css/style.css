@@ -1,0 +1,174 @@
+/* Base Styles */
+.nfl-team-display {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+/* Team Header */
+.team-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.team-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.team-header h2 {
+    margin: 0;
+    flex-grow: 1;
+    color: #1a1a1a;
+}
+
+.toggle-view {
+    padding: 0.5rem 1rem;
+    background: #4F2683;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Team Meta */
+.team-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+}
+
+.meta-item i {
+    color: #4F2683;
+}
+
+/* Player Filters */
+.player-filters {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.player-search, .position-filter {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.player-search {
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+/* Players Grid */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.player-card {
+    background: #f8f9fa;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.player-card:hover {
+    transform: translateY(-3px);
+}
+
+.player-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #4F2683;
+    color: white;
+}
+
+.player-headshot {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 2px solid white;
+}
+
+.player-info {
+    flex-grow: 1;
+}
+
+.player-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.jersey {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.player-details {
+    padding: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.detail-row .label {
+    font-weight: 600;
+    width: 100px;
+    color: #555;
+}
+
+/* Raw Data Toggle */
+.raw-data-toggle {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.api-raw-data {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 4px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+}
